@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jenkins-web
+  name: jenkins-webapp
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: jenkins-web
+      app: jenkins-webapp
   template:
     metadata:
       labels:
-        app: jenkins-web
+        app: jenkins-webapp
     spec:
       containers:
         - name: jenkinswebapp
-          image: vinodhconnects/jenkinswebapp
+          image: yogita077/jenkinswebapp
           ports:
             - containerPort: 80
